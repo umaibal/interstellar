@@ -12,21 +12,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors[:password_confirmation].any?
   end
 
-  test "user phone number must be numerical" do
-    user = User.new(username: "Arthur",
-                    full_name: "Arthur Read",
-                    country: "United States of America",
-                    email: "aardvark@hotmail.com",
-                    password: "dw",
-                    password_confirmation: "dw")
-
-    user.phone_number = "fjhldsoqje"
-    assert user.invalid?
-
-    # user.phone_number = 6273141
-    # assert user.valid?
-  end
-
   test "password confirmation must match password" do
     user = User.new(username: "DW",
       full_name: "DW Read",
