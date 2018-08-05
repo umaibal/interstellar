@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  document_type: 1
+  expiration_date: 2018-08-05
+  passport_number: 1
+  drivers_licence_number: 1
+
+two:
+  document_type: 1
+  expiration_date: 2018-08-05
+  passport_number: 1
+  drivers_licence_number: 1

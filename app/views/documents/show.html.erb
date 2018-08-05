@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Document type:</strong>
+  <%= @document.document_type %>
+</p>
+
+<p>
+  <strong>Expiration date:</strong>
+  <%= @document.expiration_date %>
+</p>
+
+<p>
+  <strong>Passport number:</strong>
+  <%= @document.passport_number %>
+</p>
+
+<p>
+  <strong>Drivers licence number:</strong>
+  <%= @document.drivers_licence_number %>
+</p>
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

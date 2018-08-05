@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seat: 1
+  meal_preference: 1
+  destination: MyString
+  departure_time: 2018-08-05 01:14:26
+  arrival_time: 2018-08-05 01:14:26
+
+two:
+  seat: 1
+  meal_preference: 1
+  destination: MyString
+  departure_time: 2018-08-05 01:14:26
+  arrival_time: 2018-08-05 01:14:26
