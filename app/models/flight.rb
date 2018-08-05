@@ -4,6 +4,7 @@ class Flight < ApplicationRecord
     validates :departure_time, presence: true
     validates :arrival_time, presence: true
 
+    belongs_to :users
 
 
 end
