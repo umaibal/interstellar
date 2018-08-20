@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'store#index', as: 'store-index'
+  
+  resources :carts
   resources :tickets
   resources :documents
   resources :flights
