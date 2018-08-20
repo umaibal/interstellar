@@ -5,22 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Flight.destroy_all
 User.destroy_all
+Flight.destroy_all
+Ticket.destroy_all
 Document.destroy_all
-
-Flight.create!(
-    [{
-    seat: 6,
-    destination: "Hawaii",
-    departure_time: '2018-05-11 21:30:00',
-    arrival_time: '2018-05-12 02:15:00'
-    }, {
-    seat: 18,
-    destination: "Cuba",
-    departure_time: '2018-06-21 19:32:00',
-    arrival_time: '2018-06-22 07:54:00'
-    }])
 
 User.create!([{
     username: "hp",
@@ -40,6 +28,34 @@ User.create!([{
     password_confirmation: "22kim"
 }])
 
+Flight.create!(
+    [{
+    total_seats: 100,
+    destination: "Hawaii",
+    departure_time: '2018-05-11 21:30:00',
+    arrival_time: '2018-05-12 02:15:00'
+    }, {
+    total_seats: 80,
+    destination: "Cuba",
+    departure_time: '2018-06-21 19:32:00',
+    arrival_time: '2018-06-22 07:54:00'
+    }])
+
+Ticket.create!(
+    [{
+    meal_preference: 2,
+    seat_selection: 10,
+    num_luggage: 2,
+    user_id: 1,
+    flight_id: 1
+    }, {
+    meal_preference: 1,
+    seat_selection: 4,
+    num_luggage: 1,
+    user_id: 2,
+    flight_id: 2
+    }])
+
 Document.create!([
     {
     document_type: 1,
@@ -51,4 +67,4 @@ Document.create!([
     drivers_licence_number: "B01223501222232"
     }])
 
-p "created 2 flights, users and documents"
+p "created 2 flights, users, tickets and documents"
