@@ -7,7 +7,7 @@ class User < ApplicationRecord
     validates :password, presence: true, confirmation: true
     validates :password_confirmation, presence: true
 
-    has_many :flights
+    has_many :tickets
+    has_many :flights, :through => :tickets
     has_many :documents
-
 end

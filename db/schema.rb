@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_05_051732) do
+ActiveRecord::Schema.define(version: 2018_08_20_145138) do
 
   create_table "documents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "document_type"
@@ -22,11 +22,18 @@ ActiveRecord::Schema.define(version: 2018_08_05_051732) do
   end
 
   create_table "flights", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "seat"
-    t.integer "meal_preference"
+    t.integer "total_seats"
     t.string "destination"
     t.time "departure_time"
     t.time "arrival_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tickets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "meal_preference"
+    t.integer "seat_selection"
+    t.integer "num_luggage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

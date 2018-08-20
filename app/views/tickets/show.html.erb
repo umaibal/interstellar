@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Meal preference:</strong>
+  <%= @ticket.meal_preference %>
+</p>
+
+<p>
+  <strong>Seat selection:</strong>
+  <%= @ticket.seat_selection %>
+</p>
+
+<p>
+  <strong>Num luggage:</strong>
+  <%= @ticket.num_luggage %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>
