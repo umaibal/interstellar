@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+
+<link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/latest/polaris.css" />
+
   <head>
-    <title>Interstellar</title>
+    <title>Interstellar Flight Store</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +13,19 @@
   </head>
 
   <body>
+<div class="Polaris-Card">
+  <ul class="Polaris-OptionList">
+    <li class="Polaris-OptionList__Options">
+      <p class="Polaris-OptionList__Title">Sidebar</p>
+      <ul class="Polaris-OptionList__Options">
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">Home</button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">My Tickets</button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">My Profile</button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">Contact</button></li>
+      </ul>
+    </li>
+  </ul>
+</div>
     <%= yield %>
   </body>
 </html>

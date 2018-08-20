@@ -4,7 +4,7 @@ class StoreController < ApplicationController
   end
 
   def displayFlightsByDate 
-    @flights = Flight.order(departure_time)
+    @flights = Flight.order(:departure_time)
     # fix this later to order based on cheapest prices ASC
   end
 end
