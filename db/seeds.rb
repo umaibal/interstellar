@@ -60,11 +60,13 @@ Document.create!([
     {
     document_type: 1,
     expiration_date: "2020-01-07",
-    passport_number: "ZE000774"
+    passport_number: "ZE000774",
+    user_id: 1
     }, {
     document_type: 2,
     expiration_date: "2020-12-31",
-    drivers_licence_number: "B01223501222232"
+    drivers_licence_number: "B01223501222232",
+    user_id: 2
     }])
 
-p "created 2 flights, users, tickets and documents"
+p "created 2 flights, 2 users, 2 tickets and 2 documents"

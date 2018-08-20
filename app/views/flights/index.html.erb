@@ -5,8 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Seat</th>
-      <th>Meal preference</th>
+      <th>Total seats</th>
       <th>Destination</th>
       <th>Departure time</th>
       <th>Arrival time</th>
@@ -17,8 +16,7 @@
   <tbody>
     <% @flights.each do |flight| %>
       <tr>
-        <td><%= flight.seat %></td>
-        <td><%= flight.meal_preference %></td>
+        <td><%= flight.total_seats %></td>
         <td><%= flight.destination %></td>
         <td><%= flight.departure_time %></td>
         <td><%= flight.arrival_time %></td>

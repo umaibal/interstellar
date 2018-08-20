@@ -4,7 +4,7 @@ class FlightTest < ActiveSupport::TestCase
   test "flight attributes must not be empty" do
     flight = Flight.new
     assert flight.invalid?
-    assert flight.errors[:seat].any?
+    assert flight.errors[:total_seats].any?
     assert flight.errors[:destination].any?
     assert flight.errors[:departure_time].any?
     assert flight.errors[:arrival_time].any?
