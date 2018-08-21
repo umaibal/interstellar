@@ -18,8 +18,8 @@
               <div class="Polaris-ResourceList-Item__Container" id="341">
                 <div class="Polaris-ResourceList-Item__Content">
                             <div class="Polaris-Card">
-                            <h3><span class="Polaris-TextStyle--variationStrong"><%= flight.destination %></span></h3>
-                            <span class="Polaris-TextStyle--variationSubdued"><%= flight.departure_time %></span>
+                            <h3><span class="Polaris-TextStyle--variationStrong"><%= sanitize(flight.destination)%></span></h3>
+                            <span class="Polaris-TextStyle--variationSubdued"><%= (flight.departure_time).to_formatted_s(:long) %></span>
                             <a class="Polaris-Button" href="/users/new" data-polaris-unstyled="true"><span class="Polaris-Button__Content"><span>Add product</span></span></a>
                             </div>
                 </div>
