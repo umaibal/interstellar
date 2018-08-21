@@ -7,17 +7,17 @@ one:
   country: MyString
   city: MyString
   phone_number: 1
-  email: MyString
+  email: MyString@gmail.com
   password: MyString
   password_confirmation: MyString
 
 two:
-  username: MyString
-  full_name: MyString
-  mailing_address: MyText
-  country: MyString
-  city: MyString
+  username: MyString2
+  full_name: MyString2
+  mailing_address: MyText2
+  country: MyString2
+  city: MyString2
   phone_number: 1
-  email: MyString
-  password: MyString
-  password_confirmation: MyString
+  email: MyString2@gmail.com
+  password: MyString2
+  password_confirmation: MyString2
