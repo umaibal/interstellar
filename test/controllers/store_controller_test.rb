@@ -8,7 +8,7 @@ class StoreControllerTest < ActionDispatch::IntegrationTest
     # assert_select 'body ul.polaris-option_list', minimum: 4
     assert_select 'h1', 'Flight Catalog'
     # make sure it is the index form and not an incorrect redirect:
-    # assert_select 'form', false, 'This page must contain no forms'
+    assert_select 'form', false, 'This page must contain no forms'
     assert_select 'h3', 'Cuba'
   end
 
