@@ -11,87 +11,59 @@
     </div>
   <% end %>
 
-<form>
-  <div class="Polaris-FormLayout">
-    <div
-      class="Polaris-FormLayout__Item">
-      <div class="">
-        
-        <h2 class="Polaris-Heading">Traveller Information:</h2>
+  <h2 class="Polaris-Heading">Traveller Information:</h2>
 
-        <div class="Polaris-Labelled__LabelWrapper">
-          <div class="Polaris-Label"><label id="NameLabel" for="Name" class="Polaris-Label__Text"><%= f.label :full_name %></label></div>
-        </div>
-        <div class="Polaris-TextField"><input id="Name" class="Polaris-TextField__Input" type="text" aria-describedby="NameHelpText" aria-labelledby="NameLabel" aria-invalid="false" value="">
-          <div class="Polaris-TextField__Backdrop"></div>
-        </div>
-        <div class="Polaris-Labelled__HelpText" id="NameHelpText"><span>Please enter your First and Last Name</span></div>
-
-        <div class="Polaris-Labelled__LabelWrapper">
-          <div class="Polaris-Label"><label id="AddressLabel" for="Address" class="Polaris-Label__Text"><%= f.label :mailing_address %></label></div>
-        </div>
-        <div class="Polaris-TextField"><input id="Address" class="Polaris-TextField__Input" type="text" aria-describedby="AddressHelpText" aria-labelledby="AddressLabel" aria-invalid="false" value="">
-          <div class="Polaris-TextField__Backdrop"></div>
-        </div>
-        <div class="Polaris-Labelled__HelpText" id="AddressHelpText"><span>Street number, name</span></div>
-
-        <div class="Polaris-Labelled__LabelWrapper">
-          <div class="Polaris-Label"><label id="CountryLabel" for="Country" class="Polaris-Label__Text"><%= f.label :country %></label></div>
-        </div>
-        <div class="Polaris-TextField"><input id="Country" class="Polaris-TextField__Input" type="text" aria-describedby="CountryHelpText" aria-labelledby="CountryLabel" aria-invalid="false" value="">
-          <div class="Polaris-TextField__Backdrop"></div>
-        </div>
-
-        <div class="Polaris-Labelled__LabelWrapper">
-          <div class="Polaris-Label"><label id="CityLabel" for="City" class="Polaris-Label__Text"><%= f.label :city %></label></div>
-        </div>
-        <div class="Polaris-TextField"><input id="City" class="Polaris-TextField__Input" type="text" aria-describedby="CityHelpText" aria-labelledby="CityLabel" aria-invalid="false" value="">
-          <div class="Polaris-TextField__Backdrop"></div>
-        </div>
-
-        <h2 class="Polaris-Heading">Contact Information:</h2>
-
-        <div class="Polaris-Labelled__LabelWrapper">
-          <div class="Polaris-Label"><label id="PhoneNumberLabel" for="PhoneNumber" class="Polaris-Label__Text"><%= f.label :phone_number %></label></div>
-        </div>
-        <div class="Polaris-TextField"><input id="PhoneNumber" class="Polaris-TextField__Input" type="number" aria-describedby="PhoneNumberHelpText" aria-labelledby="PhoneNumberLabel" aria-invalid="false" value="">
-          <div class="Polaris-TextField__Backdrop"></div>
-        </div>        
-
-        <div class="Polaris-Labelled__LabelWrapper">
-          <div class="Polaris-Label"><label id="EmailLabel" for="Email" class="Polaris-Label__Text"><%= f.label :email %></label></div>
-        </div>
-        <div class="Polaris-TextField"><input id="Email" class="Polaris-TextField__Input" type="email" aria-describedby="EmailHelpText" aria-labelledby="Email" aria-invalid="false" value="">
-          <div class="Polaris-TextField__Backdrop"></div>
-        </div>
-        <div class="Polaris-Labelled__HelpText" id="EmailHelpText"><span>We’ll use this email address to inform you on any flight status updates</span></div>
-
-        <h2 class="Polaris-Heading">Create An Account for Faster Bookings:</h2>
-
-        <div class="Polaris-Labelled__LabelWrapper">
-          <div class="Polaris-Label"><label id="UsernameLabel" for="Username" class="Polaris-Label__Text"><%= f.label :username %></label></div>
-        </div>
-        <div class="Polaris-TextField"><input id="Username" class="Polaris-TextField__Input" type="text" aria-describedby="UsernameHelpText" aria-labelledby="Username" aria-invalid="false" value="">
-          <div class="Polaris-TextField__Backdrop"></div>
-        </div>       
-
-        <div class="Polaris-Labelled__LabelWrapper">
-          <div class="Polaris-Label"><label id="PasswordLabel" for="Password" class="Polaris-Label__Text"><%= f.label :password %></label></div>
-        </div>
-        <div class="Polaris-TextField"><input id="Password" class="Polaris-TextField__Input" type="password" aria-describedby="PasswordHelpText" aria-labelledby="Password" aria-invalid="false" value="">
-          <div class="Polaris-TextField__Backdrop"></div>
-        </div>       
-
-        <div class="Polaris-Labelled__LabelWrapper">
-          <div class="Polaris-Label"><label id="PasswordConfirmationLabel" for="PasswordConfirmation" class="Polaris-Label__Text"><%= f.label :password_confirmation %></label></div>
-        </div>
-        <div class="Polaris-TextField"><input id="PasswordConfirmation" class="Polaris-TextField__Input" type="password" aria-describedby="PasswordConfirmationHelpText" aria-labelledby="PasswordConfirmation" aria-invalid="false" value="">
-          <div class="Polaris-TextField__Backdrop"></div>
-        </div>       
-
-      </div>
+  <div class="field">
+    <%= f.label :full_name %>
+    <%= f.text_field :full_name %>
   </div>
-  <div class="Polaris-FormLayout__Item"><button type="submit" class="Polaris-Button"><span class="Polaris-Button__Content"><span>Submit</span></span></button></div>
-  </div><button type="submit" class="Polaris-Form--submit" aria-hidden="true"></button></form>
+
+  <div class="field">
+    <%= f.label :mailing_address %>
+    <%= f.text_area :mailing_address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <h2 class="Polaris-Heading">Contact Information:</h2>
+
+  <div class="field">
+    <%= f.label :phone_number %>
+    <%= f.number_field :phone_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <h2 class="Polaris-Heading">Create An Account for Faster Bookings:</h2>
+
+  <div class="field">
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.text_field :password_confirmation %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 
 <% end %>
