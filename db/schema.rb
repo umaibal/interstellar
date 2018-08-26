@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_26_143427) do
+ActiveRecord::Schema.define(version: 2018_08_26_215012) do
 
   create_table "carts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -36,14 +36,28 @@ ActiveRecord::Schema.define(version: 2018_08_26_143427) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "full_name"
+    t.text "mailing_address"
+    t.string "country"
+    t.string "city"
+    t.integer "phone_number"
+    t.string "email"
+    t.integer "pay_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tickets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "flight_id"
     t.bigint "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity", default: 1
+    t.bigint "order_id"
     t.index ["cart_id"], name: "index_tickets_on_cart_id"
     t.index ["flight_id"], name: "index_tickets_on_flight_id"
+    t.index ["order_id"], name: "index_tickets_on_order_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -62,4 +76,5 @@ ActiveRecord::Schema.define(version: 2018_08_26_143427) do
 
   add_foreign_key "tickets", "carts"
   add_foreign_key "tickets", "flights"
+  add_foreign_key "tickets", "orders"
 end

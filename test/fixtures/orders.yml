@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: Bruno Mars
+  mailing_address: 12 Hollywood Drive
+  country: United States of America
+  city: Los Angeles
+  phone_number: 2
+  email: bm@gmail.com
+  pay_type: 0
+
+two:
+  full_name: Zendaya Coleman
+  mailing_address: 12 Target Lane
+  country: United States of America
+  city: Los Angeles
+  phone_number: 1
+  email: zendaya@hotmail.com
+  pay_type: 1
