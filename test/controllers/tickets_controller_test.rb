@@ -20,7 +20,9 @@ class TicketsControllerTest < ActionDispatch::IntegrationTest
       post tickets_url, params: { ticket: { cart_id: @ticket.cart_id, flight_id: @ticket.flight_id } }
     end
 
-    assert_redirected_to ticket_url(Ticket.last)
+    follow_redirect!
+
+    assert_select 'h2', 'Your Shopping Cart'
   end
 
   test "should show ticket" do

@@ -27,7 +27,7 @@ class TicketsController < ApplicationController
   # POST /tickets.json
   def create
     flight = Flight.find(params[:flight_id])
-    @ticket = @cart.tickets.build(flight: flight)
+    @ticket = @cart.add_flight(flight)
 
     respond_to do |format|
       if @ticket.save
