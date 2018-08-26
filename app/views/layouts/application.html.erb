@@ -21,7 +21,7 @@
         <% if @cart %>
 
         <div id="cart" class="carts">
-          <%= render @cart %>
+          <%= render_if_not_empty @cart && @cart.tickets.any?, @cart %>
         </div>
         <% end %>
         
