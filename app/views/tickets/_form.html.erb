@@ -12,21 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :meal_preference %>
-    <%= form.number_field :meal_preference %>
+    <%= form.label :flight_id %>
+    <%= form.text_field :flight_id %>
   </div>
 
   <div class="field">
-    <%= form.label :seat_selection %>
-    <%= form.number_field :seat_selection %>
-  </div>
-
-  <div class="field">
-    <%= form.label :num_luggage %>
-    <%= form.number_field :num_luggage %>
+    <%= form.label :cart_id %>
+    <%= form.text_field :cart_id %>
   </div>
 
   <div class="actions">
-    <%= button_to 'Add to Cart', line_items_path(flight_id: flight) %>
+    <%= form.submit %>
   </div>
 <% end %>

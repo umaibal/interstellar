@@ -46,6 +46,14 @@ class FlightsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to flights_url
   end
 
+  test "can't delete flight in cart" do
+    assert_difference('Flight.count', 0) do
+      delete flight_url(flights(:two)) 
+    end
+
+    assert_redirected_to flights_url
+  end
+
   test "should destroy flight" do
     assert_difference('Flight.count', -1) do
       delete flight_url(@flight)

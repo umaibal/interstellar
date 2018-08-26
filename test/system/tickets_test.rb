@@ -14,9 +14,8 @@ class TicketsTest < ApplicationSystemTestCase
     visit tickets_url
     click_on "New Ticket"
 
-    fill_in "Meal Preference", with: @ticket.meal_preference
-    fill_in "Num Luggage", with: @ticket.num_luggage
-    fill_in "Seat Selection", with: @ticket.seat_selection
+    fill_in "Cart", with: @ticket.cart_id
+    fill_in "Flight", with: @ticket.flight_id
     click_on "Create Ticket"
 
     assert_text "Ticket was successfully created"
@@ -27,9 +26,8 @@ class TicketsTest < ApplicationSystemTestCase
     visit tickets_url
     click_on "Edit", match: :first
 
-    fill_in "Meal Preference", with: @ticket.meal_preference
-    fill_in "Num Luggage", with: @ticket.num_luggage
-    fill_in "Seat Selection", with: @ticket.seat_selection
+    fill_in "Cart", with: @ticket.cart_id
+    fill_in "Flight", with: @ticket.flight_id
     click_on "Update Ticket"
 
     assert_text "Ticket was successfully updated"

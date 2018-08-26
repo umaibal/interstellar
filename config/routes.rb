@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  resources :tickets
   get 'store/index'
   
   resources :carts
-  resources :tickets
   resources :documents
   resources :flights
   resources :users

@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Flight.destroy_all
-Ticket.destroy_all
 Document.destroy_all
 
 User.create!([{
@@ -41,21 +40,6 @@ Flight.create!(
     arrival_time: '2018-06-22 07:54:00'
     }])
 
-Ticket.create!(
-    [{
-    meal_preference: 2,
-    seat_selection: 10,
-    num_luggage: 2,
-    user_id: 1,
-    flight_id: 1
-    }, {
-    meal_preference: 1,
-    seat_selection: 4,
-    num_luggage: 1,
-    user_id: 2,
-    flight_id: 2
-    }])
-
 Document.create!([
     {
     document_type: 1,
@@ -69,4 +53,4 @@ Document.create!([
     user_id: 2
     }])
 
-p "created 2 flights, 2 users, 2 tickets and 2 documents"
+p "created 2 flights, 2 users and 2 documents"
