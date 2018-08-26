@@ -6,7 +6,6 @@
 
 <h1 class="Polaris-Heading">Flight Catalog</h1>
 
-
 <div class="Polaris-Page">
   <div class="Polaris-Page__Content">
     <div class="Polaris-Card">
@@ -22,7 +21,7 @@
                             <div class="Polaris-Card">
                             <h3><span class="Polaris-TextStyle--variationStrong"><%= sanitize(flight.destination)%></span></h3>
                             <span class="Polaris-TextStyle--variationSubdued"><%= (flight.departure_time).to_formatted_s(:long) %></span>
-                            <%= button_to 'Add to Cart', tickets_path(flight_id: flight) %>
+                            <%= button_to 'Add to Cart', tickets_path(flight_id: flight), remote: true %>
                             </div>
                 </div>
               </div>
