@@ -36,7 +36,8 @@ class TicketsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update ticket" do
-    patch ticket_url(@ticket), params: { ticket: { cart_id: @ticket.cart_id, flight_id: @ticket.flight_id } }
+    patch ticket_url(@ticket), 
+      params: { ticket: { flight_id: @ticket.flight_id } }
     assert_redirected_to ticket_url(@ticket)
   end
 

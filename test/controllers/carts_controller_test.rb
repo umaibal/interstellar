@@ -39,10 +39,13 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy cart" do
+    post tickets_url, params: { flight_id: flights(:two).id }
+    @cart = Cart.find(session[:cart_id])
+
     assert_difference('Cart.count', -1) do
       delete cart_url(@cart)
     end
 
-    assert_redirected_to carts_url
+    assert_redirected_to store_index_url
   end
 end
