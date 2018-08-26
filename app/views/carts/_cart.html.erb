@@ -1,3 +1,4 @@
+<article>
 <% if notice %>
     <aside id="notice"><%= notice %></aside>
 <% end %>
@@ -28,7 +29,7 @@
                 </tr>
               </thead>
               <tbody>
-                <%= render(@cart.tickets) %>
+                <%= render(cart.tickets) %>
                 <tr class="Polaris-DataTable__TableRow">
               </tbody>
             </table>
@@ -40,4 +41,5 @@
   <%= button_to 'Empty Cart', @cart, method: :delete,
     data: { confirm: 'Are you sure?' } %>
 </div>
+</article>
 

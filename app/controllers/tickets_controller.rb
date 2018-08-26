@@ -32,7 +32,7 @@ class TicketsController < ApplicationController
     respond_to do |format|
       if @ticket.save
         format.html { redirect_to store_index_url }
-        format.js
+        format.js { @current_ticket = @ticket }
         format.json { render :show, status: :created, location: @ticket }
       else
         format.html { render :new }

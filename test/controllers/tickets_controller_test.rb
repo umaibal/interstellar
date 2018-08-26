@@ -25,6 +25,16 @@ class TicketsControllerTest < ActionDispatch::IntegrationTest
     assert_select 'h2', 'Your Shopping Cart'
   end
 
+  test "should create ticket via ajax" do
+    assert_difference('Ticket.count') do 
+      post tickets_url, params: { flight_id: flights(:two).id },
+        xhr: true
+    end
+
+    assert_response :success
+    assert_match /<tr class=\\"ticket-highlight/, @response.body
+  end
+
   test "should show ticket" do
     get ticket_url(@ticket)
     assert_response :success
