@@ -30,6 +30,10 @@ class FlightsController < ApplicationController
       if @flight.save
         format.html { redirect_to @flight, notice: 'Flight was successfully created.' }
         format.json { render :show, status: :created, location: @flight }
+
+        @flights = Flight.all 
+        ActionCable.server.broadcast 'flights',
+          html: render_to_string('store/index', layout: false)
       else
         format.html { render :new }
         format.json { render json: @flight.errors, status: :unprocessable_entity }
