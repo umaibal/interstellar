@@ -22,7 +22,7 @@
                             <div class="Polaris-Card">
                             <h3><span class="Polaris-TextStyle--variationStrong"><%= sanitize(flight.destination)%></span></h3>
                             <span class="Polaris-TextStyle--variationSubdued"><%= (flight.departure_time).to_formatted_s(:long) %></span>
-                            <a class="Polaris-Button" href="/users/new" data-polaris-unstyled="true"><span class="Polaris-Button__Content"><span>Add product</span></span></a>
+                            <%= button_to 'Add to Cart', tickets_path(flight_id: flight) %>
                             </div>
                 </div>
               </div>
