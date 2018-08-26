@@ -17,6 +17,14 @@
   <ul class="Polaris-OptionList">
     <li class="Polaris-OptionList__Options">
       <p class="Polaris-OptionList__Title">Sidebar</p>
+
+        <% if @cart %>
+
+        <div id="cart" class="carts">
+          <%= render @cart %>
+        </div>
+        <% end %>
+        
       <ul class="Polaris-OptionList__Options">
         <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">Home</button></li>
         <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">My Tickets</button></li>

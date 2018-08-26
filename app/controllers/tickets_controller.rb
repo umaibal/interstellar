@@ -31,7 +31,7 @@ class TicketsController < ApplicationController
 
     respond_to do |format|
       if @ticket.save
-        format.html { redirect_to @ticket.cart, notice: 'Ticket was successfully created.' }
+        format.html { redirect_to store_index_url }
         format.json { render :show, status: :created, location: @ticket }
       else
         format.html { render :new }
