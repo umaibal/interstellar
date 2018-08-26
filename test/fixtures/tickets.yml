@@ -4,8 +4,12 @@ one:
   meal_preference: 1
   seat_selection: 1
   num_luggage: 1
+  flight: two
+  cart: one
 
 two:
   meal_preference: 1
   seat_selection: 1
   num_luggage: 1
+  flight: two
+  cart: one
