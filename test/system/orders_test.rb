@@ -1,59 +1,16 @@
 require "application_system_test_case"
 
 class OrdersTest < ApplicationSystemTestCase
+  include ActiveJob::TestHelper
   setup do
     @order = orders(:one)
   end
 
-  test "visiting the index" do
-    visit orders_url
-    assert_selector "h1", text: "Orders"
-  end
-
-  test "creating a Order" do
-    visit orders_url
-    click_on "New Order"
-
-    fill_in "City", with: @order.city
-    fill_in "Country", with: @order.country
-    fill_in "Email", with: @order.email
-    fill_in "Full Name", with: @order.full_name
-    fill_in "Mailing Address", with: @order.mailing_address
-    fill_in "Pay Type", with: @order.pay_type
-    fill_in "Phone Number", with: @order.phone_number
-    click_on "Create Order"
-
-    assert_text "Order was successfully created"
-    click_on "Back"
-  end
-
-  test "updating a Order" do
-    visit orders_url
-    click_on "Edit", match: :first
-
-    fill_in "City", with: @order.city
-    fill_in "Country", with: @order.country
-    fill_in "Email", with: @order.email
-    fill_in "Full Name", with: @order.full_name
-    fill_in "Mailing Address", with: @order.mailing_address
-    fill_in "Pay Type", with: @order.pay_type
-    fill_in "Phone Number", with: @order.phone_number
-    click_on "Update Order"
-
-    assert_text "Order was successfully updated"
-    click_on "Back"
-  end
-
-  test "destroying a Order" do
-    visit orders_url
-    page.accept_confirm do
-      click_on "Destroy", match: :first
-    end
-
-    assert_text "Order was successfully destroyed"
-  end
-
   test "check credit card number" do 
+
+    Ticket.delete_all
+    Order.delete_all
+
     visit store_index_url 
     
     click_on 'Add to Cart'
@@ -71,5 +28,30 @@ class OrdersTest < ApplicationSystemTestCase
     select 'Credit Card', from: 'pay_type'
 
     assert_selector "#order_credit_card_number"
+
+    fill_in "CC #", with: "123456"
+    fill_in "Expiration Date", with: "01/21"
+
+    perform_enqueued_jobs do 
+      click_button "Submit Details"
+    end
+
+    orders = Order.all 
+    assert_equal 1, orders.size 
+
+    order = orders.first 
+
+    assert_equal "Natasha Romanoff", order.full_name
+    assert_equal "324 Avengers Tower", order.mailing_address
+    assert_equal "United States of America", order.country
+    assert_equal "New York", order.city 
+    assert_equal "natasha@gmail.com", order.email 
+    assert equal "Credit Card", order.pay_type 
+    assert_equal 1, order.tickets.size
+
+    mail = ActionMailer::Base.deliveries.last 
+    # assert_equal [""], mail.to
+    assert_equal 'Umai Balendra <umai@interstellar.ca>', mail[:from].value
+    assert_equal "Interstellar Order Confirmation", mail.subject
   end
 end
