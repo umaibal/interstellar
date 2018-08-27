@@ -5,9 +5,13 @@ class PayPalPayType extends React.Component {
         return (
             <div>
                 <div className="field">
-                    <label htmlFor="order_paypal_acct_number">PayPal Account #</label> <input type="password"
-                        name="order[order_paypal_acct_number]"
-                        id="order_paypal_acct_number" /> </div>
+                    <label htmlFor="order_paypal_username">PayPal Username</label> <input type="text"
+                        name="order[order_paypal_username]"
+                        id="order_paypal_username" /> </div>
+                <div className="field">
+                    <label htmlFor="order_paypal_password">PayPal Password</label> <input type="password"
+                        name="order[order_paypal_password]"
+                        id="order_paypal_password" /> </div>
             </div>
         );
     }

@@ -4,7 +4,6 @@ import CreditCardPayType from './CreditCardPayType';
 import DebitCardPayType from './DebitCardPayType';
 import PayPalPayType from './PayPalPayType';
 
-
 class PayTypeSelector extends React.Component {
     constructor(props) {
         super(props);
