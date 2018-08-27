@@ -52,4 +52,24 @@ class OrdersTest < ApplicationSystemTestCase
 
     assert_text "Order was successfully destroyed"
   end
+
+  test "check credit card number" do 
+    visit store_index_url 
+    
+    click_on 'Add to Cart'
+
+    click_on 'Checkout'
+
+    fill_in 'order_full_name', with: 'Natasha Romanoff'
+    fill_in 'order_mailing_address', with: '324 Avengers Tower'
+    fill_in 'order_country', with: 'United States of America'
+    fill_in 'order_city', with: 'New York'
+    fill_in 'email', with: 'natasha@gmail.com'
+
+    assert_no_selector "#order_credit_card_number"
+
+    select 'Credit Card', from: 'pay_type'
+
+    assert_selector "#order_credit_card_number"
+  end
 end
