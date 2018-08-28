@@ -4,6 +4,18 @@ class OrdersController < ApplicationController
   before_action :ensure_cart_isnt_empty, only: :new
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
+  def pay_type_params 
+    if order_params[:pay_type] == "Credit Card"
+      params.require(:order).permit(:credit_card_number, :expiration_date)
+    elsif order_params[:pay_type] == "Debit Card"
+      params.require(:order).permit(:debit_card_number, :expiration_date)
+    elsif order_params[:pay_type] == "PayPal"
+      params.require(:order).permit(:username, :password)
+    else 
+      {}
+    end
+  end
+
   # GET /orders
   # GET /orders.json
   def index
@@ -34,7 +46,7 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        ChargeOrderJob.perform(@order, pay_type_params.to_h)
+        ChargeOrderJob.perform_later(@order,pay_type_params.to_h)
         format.html { redirect_to store_index_url, notice: 'Your Ticket has been purchased. Thanks for flying with Interstellar!' }
         format.json { render :show, status: :created, location: @order }
       else
