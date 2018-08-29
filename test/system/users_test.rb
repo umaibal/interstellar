@@ -14,14 +14,8 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New User"
 
-    fill_in "City", with: @user.city
-    fill_in "Country", with: @user.country
-    fill_in "Email", with: @user.email
-    fill_in "Full Name", with: @user.full_name
-    fill_in "Mailing Address", with: @user.mailing_address
-    fill_in "Password", with: @user.password
-    fill_in "Password Confirmation", with: @user.password_confirmation
-    fill_in "Phone Number", with: @user.phone_number
+    fill_in "Password", with: 'secret'
+    fill_in "Password Confirmation", with: 'secret'
     fill_in "Username", with: @user.username
     click_on "Create User"
 
@@ -33,14 +27,8 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "Edit", match: :first
 
-    fill_in "City", with: @user.city
-    fill_in "Country", with: @user.country
-    fill_in "Email", with: @user.email
-    fill_in "Full Name", with: @user.full_name
-    fill_in "Mailing Address", with: @user.mailing_address
-    fill_in "Password", with: @user.password
-    fill_in "Password Confirmation", with: @user.password_confirmation
-    fill_in "Phone Number", with: @user.phone_number
+    fill_in "Password", with: 'secret'
+    fill_in "Password Confirmation", with: 'secret'
     fill_in "Username", with: @user.username
     click_on "Update User"
 
