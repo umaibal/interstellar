@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/latest/polaris.css" />
 
-<h1 class="Polaris-Heading">Flight Catalog</h1>
+<h1 class="Polaris-Heading"><%= t('.title_html') %></h1>
 
 <div class="Polaris-Page">
   <div class="Polaris-Page__Content">
@@ -21,7 +21,7 @@
                             <div class="Polaris-Card">
                             <h3><span class="Polaris-TextStyle--variationStrong"><%= sanitize(flight.destination)%></span></h3>
                             <span class="Polaris-TextStyle--variationSubdued"><%= (flight.departure_time).to_formatted_s(:long) %></span>
-                            <%= button_to 'Add to Cart', tickets_path(flight_id: flight), remote: true %>
+                            <%= button_to t('.add_html'), tickets_path(flight_id: flight, locale: I18n.locale), remote: true %>
                             </div>
                 </div>
               </div>

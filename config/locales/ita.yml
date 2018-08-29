@@ -1,0 +1,25 @@
+ita:
+
+  layouts:
+    application:
+      title: "Voli Interstellar"
+      catalog: "Catalogo"
+      contact: "Contatto"
+
+  store:
+    index: 
+      title_html: "Catalogo di volo"
+      add_html: "Aggiungi al carrello"
+
+  carts:
+    cart:
+      title: "Carrello della spesa"
+      empty: "Carrello vuoto"
+      checkout: "Check-out"
+      cart_heading_item: "Articolo"
+      cart_heading_price: "Prezzo"
+
+
+  # tickets:
+  #   _ticket.html.erb:  
+  #     ticket_intro: "biglietto per"
