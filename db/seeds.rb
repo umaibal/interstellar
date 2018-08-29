@@ -11,18 +11,10 @@ Document.destroy_all
 
 User.create!([{
     username: "hp",
-    full_name: "Harry Potter",
-    country: "United Kingdom",
-    city: "Hogsmeade",
-    email: "harry2@gmail.com",
     password: "hedwig9",
     password_confirmation: "hedwig9"
 }, {
     username: "khlo",
-    full_name: "Khloe Kardashian",
-    country: "United States of America",
-    city: "Los Angeles",
-    email: "kardash76@gmail.com",
     password: "22kim",
     password_confirmation: "22kim"
 }])

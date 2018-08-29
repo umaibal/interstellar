@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+  skip_before_action :authorize, only: :create
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
