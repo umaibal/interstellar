@@ -8,12 +8,15 @@ Rails.application.routes.draw do
   end
  
   resources :users
-  resources :orders
-  resources :tickets  
-  resources :carts
-  resources :documents
-  resources :flights
 
-  get 'store/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  scope '(:locale)' do
+    get 'store/index'
+
+    resources :orders
+    resources :tickets  
+    resources :carts
+    resources :documents
+    resources :flights
+  end
+
 end
