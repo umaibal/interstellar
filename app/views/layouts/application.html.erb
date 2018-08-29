@@ -19,18 +19,25 @@
       <p class="Polaris-OptionList__Title">Sidebar</p>
 
         <% if @cart %>
-
         <div id="cart" class="carts">
           <%= render_if_not_empty @cart && @cart.tickets.any?, @cart %>
         </div>
         <% end %>
         
       <ul class="Polaris-OptionList__Options">
-        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">Home</button></li>
-        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">My Tickets</button></li>
-        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">My Profile</button></li>
-        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption">Contact</button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Catalog', '/store/index' %></button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Contact', '/store/index' %></button></li>
       </ul>
+
+      <% if session[:user_id] %>
+      <!-- If logged in, show admin sidebar options as well -->
+      <ul class="Polaris-OptionList__Options">
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Orders', orders_path %></button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Users', users_path %></button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Flights', flights_path %></button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Log Out', logout_path, method: :delete %></button></li>
+      </ul>
+      <% end %>
     </li>
   </ul>
 </div>
