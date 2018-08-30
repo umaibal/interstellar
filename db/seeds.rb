@@ -22,12 +22,12 @@ User.create!([{
 Flight.create!(
     [{
     total_seats: 100,
-    destination: "Hawaii",
+    destination: "Honolulu",
     departure_time: '2018-05-11 21:30:00',
     arrival_time: '2018-05-12 02:15:00'
     }, {
     total_seats: 80,
-    destination: "Cuba",
+    destination: "Havana",
     departure_time: '2018-06-21 19:32:00',
     arrival_time: '2018-06-22 07:54:00'
     }])
