@@ -12,7 +12,7 @@ class Flight < ApplicationRecord
     # method below
     def ensure_not_referenced_by_ticket 
         unless tickets.empty?
-            errors.add(base, 'Tickets are present')
+            errors.add(:base, 'Tickets are present')
             throw :abort
         end
     end

@@ -4,7 +4,11 @@ class StoreController < ApplicationController
   before_action :set_cart
 
   def index
-    displayFlightsByDate
+    if params[:set_locale]
+      redirect_to store_index_url(locale: params[:set_locale])
+    else
+      @flights = Flight.order(:destination)
+    end
   end
 
   def displayFlightsByDate 

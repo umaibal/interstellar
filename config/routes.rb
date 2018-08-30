@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   resources :users
 
   scope '(:locale)' do
-    get '/' => 'store#index'
-    get 'store/index' => 'store#index'
+    root 'store#index', as: 'store_index', via: :all
+    # get '/' => 'store#index'
+    # get 'store/index' => 'store#index'
 
     resources :orders
     resources :tickets  

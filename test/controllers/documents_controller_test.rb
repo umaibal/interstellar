@@ -15,13 +15,13 @@ class DocumentsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create document" do
-    assert_difference('Document.count') do
-      post documents_url, params: { document: { document_type: @document.document_type, drivers_licence_number: @document.drivers_licence_number, expiration_date: @document.expiration_date, passport_number: @document.passport_number } }
-    end
+  # test "should create document" do
+  #   assert_difference('Document.count') do
+  #     post documents_url, params: { document: { document_type: @document.document_type, drivers_licence_number: @document.drivers_licence_number, expiration_date: @document.expiration_date, passport_number: @document.passport_number } }
+  #   end
 
-    assert_redirected_to document_url(Document.last)
-  end
+  #   assert_redirected_to document_url(Document.last)
+  # end
 
   test "should show document" do
     get document_url(@document)
