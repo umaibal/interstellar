@@ -22,6 +22,9 @@ gem 'webpacker', '~> 3.0'
 # user ActiveModel's has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# internationalization with Javascript
+gem 'i18n-js'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

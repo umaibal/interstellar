@@ -1,8 +1,10 @@
 <%= form_with(model: order, local: true) do |form| %>
   <% if order.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
+      <h2><%=raw t('errors.template.header', count: @order.errors.count,
+        model: t('activerecord.models.order')) %>.</h2>
+        
+        <p><%= t('errors.template.body') %></p>
       <ul>
       <% order.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,38 +14,38 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :full_name %>
+    <%= form.label :full_name, t('.full_name') %>
     <%= form.text_field :full_name, id: :order_full_name %>
   </div>
 
   <div class="field">
-    <%= form.label :mailing_address %>
+    <%= form.label :mailing_address, t('.mailing_address') %>
     <%= form.text_area :mailing_address, id: :order_mailing_address, rows: 2, cols: 40 %>
   </div>
 
   <div class="field">
-    <%= form.label :country %>
+    <%= form.label :country, t('.country') %>
     <%= form.text_field :country, id: :order_country %>
   </div>
 
   <div class="field">
-    <%= form.label :city %>
+    <%= form.label :city, t('.city_html') %>
     <%= form.text_field :city, id: :order_city %>
   </div>
 
   <div class="field">
-    <%= form.label :phone_number %>
+    <%= form.label :phone_number, t('.phone_number') %>
     <%= form.number_field :phone_number, id: :order_phone_number %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :email, t('.email') %>
     <%= form.email_field :email, id: :order_email %>
   </div>
 
   <div id='pay-type-component'></div>
 
   <div class="actions">
-    <%= form.submit 'Submit Details'%>
+    <%= form.submit t('.submit')%>
   </div>
 <% end %>

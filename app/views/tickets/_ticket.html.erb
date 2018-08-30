@@ -3,6 +3,6 @@
 <% else %>
 <tr class="Polaris-DataTable__TableRow">
 <% end %>
-    <th class="Polaris-DataTable__Cell Polaris-DataTable__Cell--fixed" scope="row"><%= ticket.quantity %> &times; ticket(s) to <%= ticket.flight.destination %></th>
+    <th class="Polaris-DataTable__Cell Polaris-DataTable__Cell--fixed" scope="row"><%= ticket.quantity %> &times; <%= t('.ticket_intro') %> <%= ticket.flight.destination %></th>
     <td class="Polaris-DataTable__Cell Polaris-DataTable__Cell--numeric">$80.00</td>
 </tr>

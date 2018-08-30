@@ -19,6 +19,37 @@ en:
       cart_heading_item: "Item"
       cart_heading_price: "Price"
 
-  # tickets:
-  #   _ticket.html.erb:  
-  #     ticket_intro: "ticket(s) to"
+  tickets:
+    ticket:  
+      ticket_intro: "ticket(s) to"
+
+  orders:
+    new:
+      title: "Who's travelling?"
+    form:
+      full_name: "Full Name"
+      mailing_address: "Mailing Address"
+      country: "Country"
+      city_html: "City"
+      phone_number: "Phone Number"
+      email: "Email"
+      submit: "Submit Details"
+      pay_type: "Pay type"
+      pay_prompt_html: "Choose a payment method"
+      pay_types:
+        credit_card: "Credit Card"
+        debit_card: "Debit Card"
+        paypal: "PayPal"
+      credit_card_pay_type: 
+        cc_number: "CC #"
+        expiration: "Expiration Date"
+      debit_card_pay_type: 
+        debit_number: "Debit Card #"
+        expiration: "Expiration Date"
+      paypal_pay_type:
+        username: "PayPal Username"
+        password: "PayPal Password"
+
+  thanks: "Your Ticket has been purchased. Thanks for flying with Interstellar!"
+      
+

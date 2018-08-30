@@ -19,7 +19,58 @@ ita:
       cart_heading_item: "Articolo"
       cart_heading_price: "Prezzo"
 
+  tickets:
+    ticket:  
+      ticket_intro: "biglietto per"
 
-  # tickets:
-  #   _ticket.html.erb:  
-  #     ticket_intro: "biglietto per"
+  orders:
+    new:
+      title: "Chi viaggia?"
+    form:
+      full_name: "Nome e cognome"
+      mailing_address: "Indirizzo di posta"
+      country: "Nazione"
+      city_html: "Città"
+      phone_number: "Numero di telefono"
+      email: "E-mail"
+      submit: "Invia dettagli"
+      pay_type: "Tipo di paga"
+      pay_prompt_html: "Scegli un metodo di pagamento"
+      pay_types:
+        credit_card: "Carta di credito"
+        debit_card: "Carta di debito"
+        paypal: "PayPal"
+      credit_card_pay_type: 
+        cc_number: "Numero di carta di credito"
+        expiration: "Data di scadenza"
+      debit_card_pay_type: 
+        debit_number: "Numero della carta di debito"
+        expiration: "Data di scadenza"
+      paypal_pay_type:
+        username: "Nome utente PayPal"
+        password: "Password PayPal"
+
+  activerecord:
+    errors:
+      messages:
+        inclusion: "vietato questo ordine di essere salvato"
+        blank: "non può essere lasciato vuoto"
+    models:
+      order: "ordine"
+    attributes:
+      order:
+        full_name: "Nome e cognome"
+        mailing_address: "Indirizzo di posta"
+        country: "Nazione"
+        city_html: "Città"
+        phone_number: "Nome e cognome"
+        email: "E-mail"
+        pay_type: "Forma de pago"
+  errors:
+    template:
+      body: "Ci sono problemi con i seguenti campi:"
+      header:
+        one: "1 errore ha impedito che %{model} venisse salvato"
+        other: "%{count} gli errori hanno impedito che %{model} venisse salvato"
+
+  thanks: "Il tuo biglietto è stato acquistato. Grazie per aver volato con Interstellar!"
