@@ -20,7 +20,7 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
       post carts_url, params: { cart: {  } }
     end
 
-    assert_response :success
+    assert_redirected_to Cart.last
   end
 
   test "should show cart" do

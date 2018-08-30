@@ -1,37 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Full name:</strong>
+  <strong><%= t('.full_name') %></strong>
   <%= @order.full_name %>
 </p>
 
 <p>
-  <strong>Mailing address:</strong>
+  <strong><%= t('.mailing_address') %>:</strong>
   <%= @order.mailing_address %>
 </p>
 
 <p>
-  <strong>Country:</strong>
+  <strong><%= t('.country') %></strong>
   <%= @order.country %>
 </p>
 
 <p>
-  <strong>City:</strong>
+  <strong><%= t('.city_html') %></strong>
   <%= @order.city %>
 </p>
 
 <p>
-  <strong>Phone number:</strong>
+  <strong><%= t('.phone_number') %></strong>
   <%= @order.phone_number %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong><%= t('.email') %></strong>
   <%= @order.email %>
 </p>
 
 <p>
-  <strong>Pay type:</strong>
+  <strong><%= t('.pay_type') %></strong>
   <%= @order.pay_type %>
 </p>
 

@@ -18,6 +18,8 @@ ita:
       checkout: "Check-out"
       cart_heading_item: "Articolo"
       cart_heading_price: "Prezzo"
+    new:
+      title: "fill in here"
 
   tickets:
     ticket:  
@@ -33,8 +35,8 @@ ita:
       city_html: "Città"
       phone_number: "Numero di telefono"
       email: "E-mail"
-      submit: "Invia dettagli"
       pay_type: "Tipo di paga"
+      submit: "Invia dettagli"
       pay_prompt_html: "Scegli un metodo di pagamento"
       pay_types:
         credit_card: "Carta di credito"
@@ -49,6 +51,15 @@ ita:
       paypal_pay_type:
         username: "Nome utente PayPal"
         password: "Password PayPal"
+    show:
+      full_name: "Nome e cognome"
+      mailing_address: "Indirizzo di posta"
+      country: "Nazione"
+      city_html: "Città"
+      phone_number: "Numero di telefono"
+      email: "E-mail"
+      submit: "Invia dettagli"
+      pay_type: "Tipo di paga"     
 
   activerecord:
     errors:

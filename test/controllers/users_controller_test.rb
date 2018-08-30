@@ -17,10 +17,16 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference('User.count') do
-      post users_url, params: { user: { username: 'umai', password: 'secret', password_confirmation: 'secret' } }
+      post users_url, params: { user: { username: 'umai2', password: 'secret', password_confirmation: 'secret' } }
     end
 
     assert_redirected_to users_url
+  end
+
+  test "should not create user if username is not unique" do
+    assert_no_difference('User.count') do
+      post users_url, params: { user: { username: 'umai', password: 'secret', password_confirmation: 'secret' } }
+    end
   end
 
   test "should show user" do

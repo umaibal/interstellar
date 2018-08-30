@@ -18,6 +18,8 @@ en:
       checkout: "Checkout"
       cart_heading_item: "Item"
       cart_heading_price: "Price"
+    new: 
+      title: "Your Shopping Cart"
 
   tickets:
     ticket:  
@@ -33,15 +35,15 @@ en:
       city_html: "City"
       phone_number: "Phone Number"
       email: "Email"
-      submit: "Submit Details"
       pay_type: "Pay type"
+      submit: "Submit Details"
       pay_prompt_html: "Choose a payment method"
       pay_types:
         credit_card: "Credit Card"
         debit_card: "Debit Card"
         paypal: "PayPal"
       credit_card_pay_type: 
-        cc_number: "CC #"
+        cc_number: "Credit Card #"
         expiration: "Expiration Date"
       debit_card_pay_type: 
         debit_number: "Debit Card #"
@@ -49,6 +51,16 @@ en:
       paypal_pay_type:
         username: "PayPal Username"
         password: "PayPal Password"
+    show:
+      full_name: "Full Name"
+      mailing_address: "Mailing Address"
+      country: "Country"
+      city_html: "City"
+      phone_number: "Phone Number"
+      email: "Email"
+      submit: "Submit Details"
+      pay_type: "Pay type"
+
 
   thanks: "Your Ticket has been purchased. Thanks for flying with Interstellar!"
       
