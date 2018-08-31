@@ -5,6 +5,11 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.all
+
+    respond_to do |format|
+      format.html
+      format.atom
+    end
   end
 
   # GET /flights/1
