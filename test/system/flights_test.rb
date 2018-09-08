@@ -14,7 +14,12 @@ class FlightsTest < ApplicationSystemTestCase
     visit flights_url
     click_on "New Flight"
 
-    fill_in "Destination", with: @flight.destination
+    fill_in "Destination", with: 'Santorini'
+    select '10', from: "flight[arrival_time(4i)]"
+    select '20', from: "flight[arrival_time(5i)]"
+    select '7', from: "flight[departure_time(4i)]", match: :first
+    select '05', from: "flight[departure_time(5i)]"
+    fill_in "Total seats", with: 20
     click_on "Create Flight"
 
     assert_text "Flight was successfully created"
@@ -25,7 +30,11 @@ class FlightsTest < ApplicationSystemTestCase
     visit flights_url
     click_on "Edit", match: :first
 
-    fill_in "Destination", with: @flight.destination
+    fill_in "Destination", with: 'Santorini'
+    select '10', from: "flight[arrival_time(4i)]"
+    select '20', from: "flight[arrival_time(5i)]"
+    select '7', from: "flight[departure_time(4i)]", match: :first
+    select '05', from: "flight[departure_time(5i)]"
     click_on "Update Flight"
 
     assert_text "Flight was successfully updated"
