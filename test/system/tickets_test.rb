@@ -26,12 +26,10 @@ class TicketsTest < ApplicationSystemTestCase
     visit tickets_url
     click_on "Edit", match: :first
 
+    fill_in "Flight", with: @ticket.flight_id
     fill_in "Cart", with: @ticket.cart_id
-    flight = Flight.find(@ticket.flight_id)
-    click_on "Update Ticket"
 
-    fill_in "Flight", with: 2
-    fill_in "Cart", with: @ticket.cart_id
+    click_on "Update Ticket"
     assert_text "Ticket was successfully updated"
   end
 
