@@ -32,7 +32,7 @@ class TicketsController < ApplicationController
 
     respond_to do |format|
       if @ticket.save
-        format.html { redirect_to store_index_url }
+        format.html { redirect_to store_index_url, notice: 'Ticket was successfully created.'  }
         format.js { @current_ticket = @ticket }
         format.json { render :show, status: :created, location: @ticket }
       else
@@ -74,6 +74,6 @@ class TicketsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ticket_params
-      params.require(:ticket).permit(:flight_id)
+      params.require(:ticket).permit(:flight_id, :cart_id)
     end
 end

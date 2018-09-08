@@ -16,7 +16,7 @@ class UsersTest < ApplicationSystemTestCase
     click_on "New User"
 
     fill_in "Username", with: @user.username
-    fill_in "Password", with: 'secret'
+    fill_in "Password", with: 'secret', match: :first
     fill_in "Password Confirmation", with: 'secret'
     click_on "Create User"
 
@@ -28,7 +28,7 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "Edit", match: :first
 
-    fill_in "Password", with: 'secret'
+    fill_in "Password", with: 'secret', match: :first
     fill_in "Password Confirmation", with: 'secret'
     fill_in "Username", with: @user.username
     click_on "Update User"
