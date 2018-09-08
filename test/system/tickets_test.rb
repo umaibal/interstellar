@@ -14,8 +14,8 @@ class TicketsTest < ApplicationSystemTestCase
     visit tickets_url
     click_on "New Ticket"
 
-    fill_in "Cart", with: @ticket.cart_id
-    fill_in "Flight", with: 2
+    fill_in "Cart", with: 1
+    flight = Flight.find(@ticket.flight_id)
     click_on "Create Ticket"
 
     assert_text "Ticket was successfully created"
@@ -27,13 +27,12 @@ class TicketsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Cart", with: @ticket.cart_id
-    flight = Flight.find(ticket_params[:flight_id])
+    flight = Flight.find(@ticket.flight_id)
     click_on "Update Ticket"
 
-    fill_in "Flight", with: 7
+    fill_in "Flight", with: 2
     fill_in "Cart", with: @ticket.cart_id
     assert_text "Ticket was successfully updated"
-    click_on "Back"
   end
 
   test "destroying a Ticket" do

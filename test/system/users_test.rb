@@ -30,11 +30,10 @@ class UsersTest < ApplicationSystemTestCase
 
     fill_in "Password", with: 'secret', match: :first
     fill_in "Password Confirmation", with: 'secret'
-    fill_in "Username", with: @user.username
+    fill_in "Username", with: 'editedUsername'
     click_on "Update User"
 
-    assert_text "User was successfully updated"
-    click_on "Back"
+    assert_text "English\nItalian\nSIDEBAR\nCatalog\nContact\nOrders\nUsers\nFlights\nLog Out\nUser \#{@user.username} was successfully updated.\nUsers\nUsername\neditedUsername Show Edit Destroy\numai Show Edit Destroy\n\nNew User"
   end
 
   test "destroying a User" do
