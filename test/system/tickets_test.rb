@@ -14,12 +14,11 @@ class TicketsTest < ApplicationSystemTestCase
     visit tickets_url
     click_on "New Ticket"
 
-    fill_in "Cart", with: 1
-    flight = Flight.find(@ticket.flight_id)
+    fill_in "Flight", with: @ticket.flight_id
+    fill_in "Cart", with: @ticket.cart_id
     click_on "Create Ticket"
 
     assert_text "Ticket was successfully created"
-    click_on "Back"
   end
 
   test "updating a Ticket" do
