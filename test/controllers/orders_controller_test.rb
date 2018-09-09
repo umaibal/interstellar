@@ -17,7 +17,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    post tickets_url, params: { flight_id: flights(:two).id }
+    post tickets_url, params: { ticket: {flight_id: flights(:two).id} }
 
     get new_order_url
     assert_response :success

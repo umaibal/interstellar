@@ -17,7 +17,7 @@ class TicketsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ticket" do
     assert_difference('Ticket.count') do
-      post tickets_url, params: { cart_id: @ticket.cart_id, flight_id: @ticket.flight_id  }
+      post tickets_url, params: { ticket: {flight_id: @ticket.flight_id }  }
     end
 
     follow_redirect!
@@ -27,7 +27,7 @@ class TicketsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ticket via ajax" do
     assert_difference('Ticket.count') do 
-      post tickets_url, params: { flight_id: flights(:two).id },
+      post tickets_url, params: { ticket: { flight_id: flights(:two).id } },
         xhr: true
     end
 

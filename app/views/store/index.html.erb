@@ -21,7 +21,7 @@
                             <div class="Polaris-Card">
                             <h3><span class="Polaris-TextStyle--variationStrong"><%= sanitize(flight.destination)%></span></h3>
                             <span class="Polaris-TextStyle--variationSubdued"><%= (flight.departure_time).to_formatted_s(:long) %></span>
-                            <%= button_to t('.add_html'), tickets_path(flight_id: flight, locale: I18n.locale), remote: true %>
+                            <%= button_to t('.add_html'), tickets_path(:ticket => {flight_id: flight}, locale: I18n.locale), remote: true %>
                             </div>
                 </div>
               </div>

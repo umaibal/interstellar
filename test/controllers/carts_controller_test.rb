@@ -39,7 +39,7 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy cart" do
-    post tickets_url, params: { flight_id: flights(:two).id }
+    post tickets_url, params: { ticket: {flight_id: flights(:two).id} }
     @cart = Cart.find(session[:cart_id])
 
     assert_difference('Cart.count', -1) do

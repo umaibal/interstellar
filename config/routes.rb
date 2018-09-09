@@ -9,7 +9,7 @@ Rails.application.routes.draw do
  
   resources :users
 
-  scope '(:locale)' do
+  scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/, defaults: {locale: "en"} do
     resources :orders
     resources :tickets  
     resources :carts
