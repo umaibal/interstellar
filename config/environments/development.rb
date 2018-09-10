@@ -37,8 +37,8 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.smtp_settings = {
-    user_name: 'interstellar@gmail.ca',
-    password: 'password'
+    user_name: 'interstellarflights@gmail.com',
+    password: 'cupcake_72'
   }
 
   # line I added for email config
@@ -49,8 +49,8 @@ Rails.application.configure do
     port: 587,
     domain: "gmail.com",
     authentication: "plain",
-    user_name: 'interstellar@gmail.ca',
-    password: 'password',
+    user_name: 'interstellarflights@gmail.com',
+    password: 'cupcake_72',
     enable_starttls_auto: true
   }
 

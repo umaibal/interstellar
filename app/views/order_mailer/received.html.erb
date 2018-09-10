@@ -1,5 +1,7 @@
-<h1>Order#received</h1>
+<h3>Dear <%= @order.full_name %> ,</h3>
 
-<p>
- find me in app/views/order_mailer/received.html.erb
-</p>
+<p>Thank you for your recent order from Interstellar. You ordered:<p>
+
+<%= render @order.tickets -%>
+
+<p>We'll send you a separate e-mail when your itinerary has been processed.</p>

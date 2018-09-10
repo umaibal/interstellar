@@ -50,7 +50,6 @@ class OrdersTest < ApplicationSystemTestCase
     assert_equal 1, order.tickets.size
 
     mail = ActionMailer::Base.deliveries.last 
-    # assert_equal [""], mail.to
     assert_equal 'admin@interstellar.ca', mail[:from].value
     assert_equal "Interstellar Order Confirmation", mail.subject
   end
