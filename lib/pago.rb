@@ -12,7 +12,7 @@ class Pago
                 payment_details.fetch(:expiration_year).to_s
         when :debit_card 
             Rails.logger.info "Processing debit_card: " +
-                payment_details.fetch(:dc_num).to_s + "/" +
+                payment_details.fetch(:debit_number).to_s + "/" +
                 payment_details.fetch(:expiration_month).to_s + "/" +
                 payment_details.fetch(:expiration_year).to_s
         when :paypal

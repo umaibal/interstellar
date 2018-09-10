@@ -31,7 +31,7 @@ class Order < ApplicationRecord
         when "Debit Card"
             payment_method = :debit_card
             month, year = pay_type_params[:expiration_date].split(//)
-            payment_details[:cc_number] = pay_type_params[:debit_card_number]
+            payment_details[:debit_number] = pay_type_params[:debit_card_number]
             payment_details[:expiration_month] = month
             payment_details[:expiration_year] = year 
         when "PayPal" 

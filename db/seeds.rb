@@ -9,7 +9,13 @@ User.destroy_all
 Flight.destroy_all
 Document.destroy_all
 
-User.create!([{
+User.create!([
+    {
+    username: "admin",
+    password: "admin",
+    password_confirmation: "admin"
+    },
+    {
     username: "hp",
     password: "hedwig9",
     password_confirmation: "hedwig9"
@@ -45,4 +51,4 @@ Document.create!([
     user_id: 2
     }])
 
-p "created 2 flights, 2 users and 2 documents"
+p "created 2 flights, 3 users and 2 documents"

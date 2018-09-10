@@ -1,5 +1,5 @@
 class OrderMailer < ApplicationMailer
-  default from: 'Umai Balendra <umai@interstellar.ca>'
+  default from: 'admin@interstellar.ca'
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
