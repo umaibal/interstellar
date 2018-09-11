@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @keyframes ticket-highlight {
     0% {
-        background: #EBF5FA;
+        background: #FEAD9A;
     }
     100% {
         background: none;
@@ -16,4 +16,8 @@
 
 p, thead, th, td {
     color: white;
+}
+
+.Polaris-DataTable__Cell--numeric {
+    color: black;
 }
