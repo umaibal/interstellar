@@ -18,20 +18,27 @@
   </head>
 
   <body>
-  <header>
-    <aside>
-      <%= form_tag store_index_path, class: 'locale' do %>
-        <%= select_tag 'set_locale',
-          options_for_select(LANGUAGES, I18n.locale.to_s),
-          onchange: 'this.form.submit()' %> 
-        <%= submit_tag 'submit', id: "submit_locale_change" %>
-      <% end %>
-    </aside>
-  </header>
-<div id="sidebar" class="Polaris-Card">
+    <!-- animated star background elements -->
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="clouds">
+  
+  
+<div class="flex-item">
+<div id="sidebar-right" class="Polaris-Card">
   <ul class="Polaris-OptionList">
     <li class="Polaris-OptionList__Options">
-      <p class="Polaris-OptionList__Title">Sidebar</p>
+      <p class="Polaris-OptionList__Title"></p>
+
+          <!-- Locale switcher -->
+          <aside>
+            <%= form_tag store_index_path, class: 'locale' do %>
+              <%= select_tag 'set_locale',
+              options_for_select(LANGUAGES, I18n.locale.to_s),
+              onchange: 'this.form.submit()' %> 
+            <%= submit_tag 'submit', id: "submit_locale_change" %>
+            <% end %>
+          </aside>
 
         <% if @cart %>
         <div id="cart" class="carts">
@@ -57,5 +64,8 @@
   </ul>
 </div>
     <%= yield %>
+</div>
+
+</div>
   </body>
 </html>

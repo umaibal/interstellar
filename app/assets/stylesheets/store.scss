@@ -1,3 +1,22 @@
 // Place all the styles related to the Store controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#catalog {
+    width: 50%;
+    margin-left: 30%;
+    background-color: black;
+} 
+
+.Polaris-Heading {
+    text-align: center;
+    color: #DFE3E8;
+}
+
+#catalog-heading {
+    color: #DFE3E8;
+}
+
+#flight-item {
+    background-color: #DFE3E8;
+}

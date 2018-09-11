@@ -4,11 +4,12 @@
 
 <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/latest/polaris.css" />
 
-<h1 class="Polaris-Heading"><%= t('.title_html') %></h1>
 
-<div class="Polaris-Page">
+<div class="flex-item">
   <div class="Polaris-Page__Content">
-    <div class="Polaris-Card">
+  <!-- Flight Catalog -->
+    <div id = "catalog" class="Polaris-Card">
+      <h1 id="catalog-heading" class="Polaris-Heading"><%= t('.title_html') %></h1>
       <div class="Polaris-ResourceList__ResourceListWrapper">
         <ul class="Polaris-ResourceList" aria-live="polite">
           <li class="Polaris-ResourceList__ItemWrapper" >
@@ -18,7 +19,7 @@
             <div class="Polaris-ResourceList-Item"><a aria-describedby="341" class="Polaris-ResourceList-Item__Link" href="customers/341" data-polaris-unstyled="true"></a>
               <div class="Polaris-ResourceList-Item__Container" id="341">
                 <div class="Polaris-ResourceList-Item__Content">
-                            <div class="Polaris-Card">
+                            <div id="flight-item" class="Polaris-Card">
                             <h3><span class="Polaris-TextStyle--variationStrong"><%= sanitize(flight.destination)%></span></h3>
                             <span class="Polaris-TextStyle--variationSubdued"><%= (flight.departure_time).to_formatted_s(:long) %></span>
                             <%= button_to t('.add_html'), tickets_path(:ticket => {flight_id: flight}, locale: I18n.locale), remote: true %>
@@ -35,5 +36,4 @@
     </div>
   </div>
 </div>
-
 
