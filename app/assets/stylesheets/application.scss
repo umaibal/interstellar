@@ -14,8 +14,119 @@
  *= require_self
  */
 
+//  .Polaris-Card {
+//   width: 55%;
+//  } 
+
+ #sidebar {
+  width: 20%;
+  height: 100%;
+ }
+
+//  .Polaris-OptionList {
+//   width: 25%;
+//  }
+
+
+ body, html {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a {
+  color: #FFFFFF;
+}
+
+a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+body, p, a, h1, h2, h3, h4, li, strong {
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+}
+
+// fieldset {
+//   margin: 0 0 150px;
+// }
+
+// form {
+//   margin: 0;
+//   width: 100%;
+// }
 
 .locale {
-    float: right;
-    margin: 1em;
+  float: right;
+  margin: 1em;
+}
+
+.select-style {
+  border: solid thin grey;
+}
+
+input[type="submit"] {
+  background-color: #E3D0FF;
+  border-radius: 0.354em;
+  border: solid thin #50248F;
+  color: #50495A;
+  font-size: 1;
+  padding: 0.354em 1em;
+  margin: 2px;
+}
+
+input[type="submit"]:hover {
+  background-color: #9C6ADE;
+}
+
+
+// FOR THE SIDEBAR AND CARDS css:
+// 
+
+.flex-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  }
+
+.flex-item:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: .3 0 auto;
+  -ms-flex: .3 0 auto;
+  flex: .3 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  }
+
+.flex-item:nth-child(2) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   }
