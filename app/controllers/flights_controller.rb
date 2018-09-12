@@ -33,7 +33,7 @@ class FlightsController < ApplicationController
 
     respond_to do |format|
       if @flight.save
-        format.html { redirect_to @flight, notice: 'Flight was successfully created.' }
+        format.html { redirect_to flights_url, notice: 'Flight was successfully created.' }
         format.json { render :show, status: :created, location: @flight }
 
         @flights = Flight.all 
