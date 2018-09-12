@@ -19,9 +19,6 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Password", with: 'secret', match: :first
     fill_in "Password Confirmation", with: 'secret'
     click_on "Create User"
-
-    # assert_text "User was successfully created"
-    # click_on "Back"
   end
 
   test "updating a User" do
@@ -32,8 +29,6 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Password Confirmation", with: 'secret'
     fill_in "Username", with: 'editedUsername'
     click_on "Update User"
-
-    # assert_text "#{@user.username} was successfully updated"
   end
 
   test "destroying a User" do
