@@ -12,10 +12,11 @@ end
 class ActionDispatch::IntegrationTest
 
   def login_as(user)
-    visit login_url
-    fill_in "Username", with: user.username
-    fill_in "Password", with: 'secret'
-    click_on "Login"
+    post login_url, params: { username: user.username, password: 'secret' }
+    # visit login_url
+    # fill_in "Username", with: user.username
+    # fill_in "Password", with: 'secret'
+    # click_on "Login"
   end
   
   def logout
