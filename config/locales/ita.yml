@@ -5,6 +5,10 @@ ita:
       title: "Voli Interstellar"
       catalog: "Catalogo"
       contact: "Contatto"
+      order: "Ordini"
+      user: "Utenti"
+      flight: "Voli"
+      logout: "Disconnettersi"
 
   store:
     index: 

@@ -54,10 +54,10 @@
       <% if session[:user_id] %>
       <!-- If logged in, show admin sidebar options as well -->
       <ul class="Polaris-OptionList__Options">
-        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Orders', orders_path %></button></li>
-        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Users', users_path %></button></li>
-        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Flights', flights_path %></button></li>
-        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to 'Log Out', logout_path, method: :delete %></button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to t('.order'), orders_path %></button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to t('.user'), users_path %></button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to t('.flight'), flights_path %></button></li>
+        <li class="Polaris-OptionList-Option" tabindex="-1"><button type="button" class="Polaris-OptionList-Option__SingleSelectOption"><%= link_to t('.logout'), logout_path, method: :delete %></button></li>
       </ul>
       <% end %>
     </li>

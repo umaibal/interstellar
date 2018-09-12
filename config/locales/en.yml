@@ -5,6 +5,10 @@ en:
       title: "Interstellar Flights"
       catalog: "Catalog"
       contact: "Contact"
+      order: "Orders"
+      user: "Users"
+      flight: "Flights"
+      logout: "Log Out"
 
   store:
     index: 

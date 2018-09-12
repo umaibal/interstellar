@@ -17,8 +17,6 @@ Rails.application.routes.draw do
     resources :flights
     
     root 'store#index', as: 'store_index', via: :all
-    # get '/' => 'store#index'
-    # get 'store/index' => 'store#index'
   end
 
 end
